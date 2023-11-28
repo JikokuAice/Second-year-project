@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    
+    <div class="image">
+        <img src="./images/loginpage.png" loading="lazy">
+    </div>
+
+    <div class="login">
+
+        <div class="heading">
+            <p>Welcome to</p>
+            <p id="logotext">finance360</p>
+        </div>
+    
+        <div class="form">
+            <form id="login-submission">
+
+                <div class="inputEmail">
+                <p>email</p>
+             <input type="email" name="email" id="inpute" >
+             <small class="emailvalid"></small>
+            </div>
+
+
+            <div class="inputPassword">
+                <p>password</p>
+             <input type="password" name="password" id="inputp" >
+             <small class="passvalid"></small>
+            </div>
+
+
+
+             <div class="remember">
+                
+                <input type="checkbox" id="inputC"><label for="inputC">remember me</label>
+
+                <p><a href="#">forget password?</a></p>
+             </div>
+
+             <button class="submit">Login</button>
+             <div class="linksign">
+            </div>
+
+            </form>
+
+        </div>
+
+        <div class="footer">
+           
+            <p class="hl"><span>OR</span></p>
+
+            <p class="tosignin">dont have account?<a href="signin.html">Register</a></p>
+
+            <div class="social">
+            <a href="./signin.html"><img src="./images/to login.png"></a>
+            </div>
+    </div>
+    <script src="./scripts/login.js"></script>
+</body>
+</html>

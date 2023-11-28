@@ -1,0 +1,17 @@
+{
+  "name": "syp-project",
+  "version": "1.0.0",
+  "description": "use 50 30 20 rule to manage student budget with user friendly UI",
+  "main": "backend/app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
