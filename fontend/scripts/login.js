@@ -13,7 +13,7 @@ const validemail=(email)=>{
 
 
 submit.addEventListener('click',(e)=>{
-
+e.preventDefault();
 let edata = [];
 let pdata = [];
 
@@ -24,7 +24,6 @@ if(!validemail(email.value)||email.value==null||email.value==""){
 console.log(evalid)
    
 if(edata.length > 0){
-    e.preventDefault();
     evalid.innerText=edata.join(',')
     email.style.border='1px solid red';
 }else{
@@ -35,13 +34,13 @@ if(edata.length > 0){
 var number = /[0-9]/g;
 var upperCaseLetters = /[A-Z]/g;
 //pass.value<8||pass.value==''||pass.value==null||
-if(!((pass.value.match(number)&&(pass.value.match(upperCaseLetters))))||pass.value<8||pass.value==null||pass.value==""){
+if(!((pass.value.match(number)&&(pass.value.match(upperCaseLetters))))||pass.value.length<8||pass.value==null||pass.value==""){
 pdata.push("Make it 8+, use capital and number")
 
 }
 
 if(pdata.length>0){
-    e.preventDefault()
+   
 pvalid.innerText=pdata.join(',');
 pass.style.border='1px solid red'
 }else{
@@ -50,6 +49,10 @@ pass.style.border='1px solid red'
 }
 
 
+if(edata.length==0&&pdata.length==0){
+    alert('domne done')
+   document.querySelector('form').submit();
+}
 })
 
 

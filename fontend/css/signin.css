@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;800&display=swap');
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-theme: #08C475;
+  --link-color: #6358DC;
+}
+
+body {
+  background: #F4F4F4;
+  padding: 1.875rem 3.125rem 1.25rem 12.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20%;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 2.8rem;
+}
+
+.aside .text {
+  width: 22.125rem;
+  margin-right: 3.125rem;
+  color: var(--white-100, #000);
+  font-family: 'Poppins';
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135.5%; /* 43.36px */
+}
+
+.text h2 {
+  color: var(--main-theme);
+}
+
+.aside-left {
+  width: 28.125rem;
+  height: 39.375rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1.875rem;
+  box-shadow: 0 1.25rem 1.25rem 0 rgba(0, 0, 0, 0.25);
+  padding: 0.9375rem 3.4375rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 3.9fr 2fr;
+  gap: 0.5rem;
+}
+
+.rheader {
+  font-family: 'Poppins';
+  line-height: 35.5px;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+}
+
+.rheader #rlogotext {
+  color: var(--main-theme);
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+#signup-submission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Poppins';
+  font-size: 0.75rem;
+}
+
+#signupuser{
+    background-image: url(../images/signin/Customer.png);
+    background-size: 20px;
+background-position: 8px 15px;
+    background-repeat: no-repeat;
+    padding: 15px 50px; 
+    border-radius: 10px;
+background-color: #ECECEC; 
+outline: none;
+border: none;
+
+}
+
+#signupuser p,#signupemail p,#signuppass1 p,#signuppass2 p{
+    position: relative;
+    left: 40px;
+    bottom: -17px;
+    font-size: 0.625rem;
+    text-transform: capitalize;
+    font-family: 'poppins';
+    font-weight: 300;
+    color: rgba(0, 0, 0, 1);
+}
+
+#signupemail{
+    background-image: url(../images/signin/email.png);
+    background-size: 20px;
+background-position: 8px 15px;
+    background-repeat: no-repeat;
+    padding: 15px 50px; 
+    border-radius: 10px;
+background-color: #ECECEC; 
+outline: none;
+border: none;   
+}
+
+
+
+#signuppass1{
+    background-image: url(../images/signin/pass.png);
+    background-size: 20px;
+background-position: 8px 15px;
+    background-repeat: no-repeat;
+    padding: 15px 50px; 
+    border-radius: 10px;
+background-color: #ECECEC; 
+outline: none;
+border: none;     
+}
+
+
+#signuppass2{
+    background-image: url(../images/signin/pass.png);
+    background-size: 20px;
+background-position: 8px 15px;
+    background-repeat: no-repeat;
+    padding: 15px 50px; 
+    border-radius: 10px;
+background-color: #ECECEC; 
+outline: none;
+border: none;
+}
+
+
+
+.submit{
+ width: 266px;
+ padding: 12px 0px;
+ border-radius: 8px;
+ outline: none;
+ border: none;
+ background-color: var(--main-theme);
+cursor: pointer;
+}
+
+.hl{
+    border-bottom: 1px solid black;
+    text-align:  center;
+    line-height: 0.1%;
+    font-family: 'poppins';
+    margin-top: 16px;
+    font-weight: 300;
+}
+
+.hl span{
+    padding: 0.625rem;
+    background-color: white; 
+}
+
+
+.toLogin{
+    margin-top: 0.625rem;
+    font-family: 'poppins';
+    text-align: center;
+}
+
+.toLogin a{
+text-decoration: none;
+color: var(--link-color);
+}
+
+.loginicon{
+    display: flex;
+    justify-content: center;
+}
+
+.loginicon a{
+    border-radius: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+.loginicon a img{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+.uservalid,.emailvalid,.passvalid,.confirmpassvalid{
+display: block;
+  color: red;
+  font-size: 12px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}

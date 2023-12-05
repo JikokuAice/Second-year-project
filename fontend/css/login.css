@@ -74,7 +74,7 @@ gap: 16px;
 }
 
 #inputp{
-    background-image: url(../images/Group.png);
+    background-image: url(../images/login/Group.png);
     background-size: 20px;
     background-position: 8px 15px;
     background-repeat: no-repeat;
@@ -86,7 +86,7 @@ gap: 16px;
     
 }
 #inpute{
-    background-image: url(../images/Vector.png);
+    background-image: url(../images/login/Vector.png);
     background-size: 20px;
 background-position: 8px 15px;
     background-repeat: no-repeat;
@@ -196,21 +196,18 @@ display: flex;
 justify-content: center;
 align-items: center;
 box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+
 }
 
 .social a img{
     height: 50px;
     width: 50px;
     border-radius: 100%;
+    
 }
 
-.passvalid{
+.passvalid,.emailvalid{
     color: red;
    
 }
 
-.emailvalid{
-
-    color: red;
-    
-}

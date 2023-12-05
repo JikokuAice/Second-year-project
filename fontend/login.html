@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="./css/login.css">
+    <link rel='icon' type="image/png" href="./images/Image 5.png" loading="lazy">
 </head>
 <body>
     
     <div class="image">
-        <img src="./images/loginpage.png" loading="lazy">
+        <img src="./images/login/loginpage.png" loading="lazy">
     </div>
 
     <div class="login">
@@ -19,12 +20,12 @@
             <p id="logotext">finance360</p>
         </div>
     
-        <div class="form">
-            <form id="login-submission">
+        <div class="form" >
+            <form id="login-submission" action="/" method="post">
 
                 <div class="inputEmail">
                 <p>email</p>
-             <input type="email" name="email" id="inpute" >
+             <input type="email" name="email" id="inpute" autocomplete="off">
              <small class="emailvalid"></small>
             </div>
 
@@ -59,9 +60,9 @@
             <p class="tosignin">dont have account?<a href="signin.html">Register</a></p>
 
             <div class="social">
-            <a href="./signin.html"><img src="./images/to login.png"></a>
+            <a href="./signin.html"><img src="./images/login/to login.png" loading="lazy"></a>
             </div>
     </div>
-    <script src="./scripts/login.js"></script>
+    <script src="./scripts/login.js" ></script>
 </body>
 </html>
