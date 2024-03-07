@@ -28,31 +28,31 @@
             <p id="rlogotext">finance360</p>
         </div>
 
-        <div class="form">
-            <form id="signup-submission">
+        <div class="form" >
+            <form id="signup-submission" action='/signup' method="post" autocomplete="off">
 
                 <div class="inputUser">
                 <p>Username</p>
-             <input type="text" name="username" id="signupuser" autocomplete="off">
+             <input type="text" name="name" id="signupuser" autocomplete="off">
              <small class="uservalid"></small>
             </div>
 
 
             <div class="inputEmail">
                 <p>Email</p>
-             <input type="email" name="email" id="signupemail" autocomplete="off" >
+             <input type="text" name="username" id="signupemail" autocomplete="off" >
              <small class="emailvalid"></small>
             </div>
 
             <div class="inputpass1">
                 <p>Password</p>
-             <input type="password" name="password1" id="signuppass1"  autocomplete="off">
+             <input type="text" name="password1" id="signuppass1"  autocomplete="off">
              <small class="passvalid"></small>
             </div>
 
             <div class="inputpass2">
                 <p>Confirm Password</p>
-             <input type="password" name="password2" id="signuppass2" autocomplete="off">
+             <input type="text" name="password2" id="signuppass2" autocomplete="off">
              <small class="confirmpassvalid"></small>
              
             </div>
@@ -67,13 +67,13 @@
         
             <p class="hl"><span>OR</span></p>
 
-            <p class="toLogin">already have account?<a href="./login.html">Login</a></p>
+            <p class="toLogin">already have account?<a href="http://localhost:5000">Login</a></p>
     </div>
    
 
 
 
 </div> 
-<script src="./scripts/signin.js"></script>
+<script src="/scripts/signin.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;800&display=swap");
 
 *,
 ::before,
@@ -9,12 +9,12 @@
 }
 
 :root {
-  --main-theme: #08C475;
-  --link-color: #6358DC;
+  --main-theme: #08c475;
+  --link-color: #6358dc;
 }
 
 body {
-  background: #F4F4F4;
+  background: #f4f4f4;
   padding: 1.875rem 3.125rem 1.25rem 12.5rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -33,7 +33,7 @@ body {
   width: 22.125rem;
   margin-right: 3.125rem;
   color: var(--white-100, #000);
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-size: 1.75rem;
   font-style: normal;
   font-weight: 400;
@@ -58,7 +58,7 @@ body {
 }
 
 .rheader {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   line-height: 35.5px;
   font-weight: 500;
   font-size: 1.5rem;
@@ -78,134 +78,132 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-size: 0.75rem;
 }
 
-#signupuser{
-    background-image: url(../images/signin/Customer.png);
-    background-size: 20px;
-background-position: 8px 15px;
-    background-repeat: no-repeat;
-    padding: 15px 50px; 
-    border-radius: 10px;
-background-color: #ECECEC; 
-outline: none;
-border: none;
-
+#signupuser {
+  background-image: url(../images/signin/Customer.png);
+  background-size: 20px;
+  background-position: 8px 15px;
+  background-repeat: no-repeat;
+  padding: 15px 50px;
+  border-radius: 10px;
+  background-color: #ececec;
+  outline: none;
+  border: none;
 }
 
-#signupuser p,#signupemail p,#signuppass1 p,#signuppass2 p{
-    position: relative;
-    left: 40px;
-    bottom: -17px;
-    font-size: 0.625rem;
-    text-transform: capitalize;
-    font-family: 'poppins';
-    font-weight: 300;
-    color: rgba(0, 0, 0, 1);
+#signupuser p,
+#signupemail p,
+#signuppass1 p,
+#signuppass2 p {
+  position: relative;
+  left: 40px;
+  bottom: -17px;
+  font-size: 0.625rem;
+  text-transform: capitalize;
+  font-family: "poppins";
+  font-weight: 300;
+  color: rgba(0, 0, 0, 1);
 }
 
-#signupemail{
-    background-image: url(../images/signin/email.png);
-    background-size: 20px;
-background-position: 8px 15px;
-    background-repeat: no-repeat;
-    padding: 15px 50px; 
-    border-radius: 10px;
-background-color: #ECECEC; 
-outline: none;
-border: none;   
+#signupemail {
+  background-image: url(../images/signin/email.png);
+  background-size: 20px;
+  background-position: 8px 15px;
+  background-repeat: no-repeat;
+  padding: 15px 50px;
+  border-radius: 10px;
+  background-color: #ececec;
+  outline: none;
+  border: none;
 }
 
-
-
-#signuppass1{
-    background-image: url(../images/signin/pass.png);
-    background-size: 20px;
-background-position: 8px 15px;
-    background-repeat: no-repeat;
-    padding: 15px 50px; 
-    border-radius: 10px;
-background-color: #ECECEC; 
-outline: none;
-border: none;     
+#signuppass1 {
+  background-image: url(../images/signin/pass.png);
+  background-size: 20px;
+  background-position: 8px 15px;
+  background-repeat: no-repeat;
+  padding: 15px 50px;
+  border-radius: 10px;
+  background-color: #ececec;
+  outline: none;
+  border: none;
 }
 
-
-#signuppass2{
-    background-image: url(../images/signin/pass.png);
-    background-size: 20px;
-background-position: 8px 15px;
-    background-repeat: no-repeat;
-    padding: 15px 50px; 
-    border-radius: 10px;
-background-color: #ECECEC; 
-outline: none;
-border: none;
+#signuppass2 {
+  background-image: url(../images/signin/pass.png);
+  background-size: 20px;
+  background-position: 8px 15px;
+  background-repeat: no-repeat;
+  padding: 15px 50px;
+  border-radius: 10px;
+  background-color: #ececec;
+  outline: none;
+  border: none;
 }
 
-
-
-.submit{
- width: 266px;
- padding: 12px 0px;
- border-radius: 8px;
- outline: none;
- border: none;
- background-color: var(--main-theme);
-cursor: pointer;
+.submit {
+  width: 266px;
+  padding: 12px 0px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  background-color: var(--main-theme);
+  cursor: pointer;
 }
 
-.hl{
-    border-bottom: 1px solid black;
-    text-align:  center;
-    line-height: 0.1%;
-    font-family: 'poppins';
-    margin-top: 16px;
-    font-weight: 300;
+.hl {
+  border-bottom: 1px solid black;
+  text-align: center;
+  line-height: 0.1%;
+  font-family: "poppins";
+  margin-top: 16px;
+  font-weight: 300;
 }
 
-.hl span{
-    padding: 0.625rem;
-    background-color: white; 
+.hl span {
+  padding: 0.625rem;
+  background-color: white;
 }
 
-
-.toLogin{
-    margin-top: 0.625rem;
-    font-family: 'poppins';
-    text-align: center;
+.toLogin {
+  margin-top: 0.625rem;
+  font-family: "poppins";
+  text-align: center;
 }
 
-.toLogin a{
-text-decoration: none;
-color: var(--link-color);
+.toLogin a {
+  text-decoration: none;
+  color: var(--link-color);
 }
 
-.loginicon{
-    display: flex;
-    justify-content: center;
+.loginicon {
+  display: flex;
+  justify-content: center;
 }
 
-.loginicon a{
-    border-radius: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+.loginicon a {
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
 }
 
-.loginicon a img{
-    height: 50px;
-    width: 50px;
-    border-radius: 100%;
+.loginicon a img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
 }
 
-.uservalid,.emailvalid,.passvalid,.confirmpassvalid{
-display: block;
+.uservalid,
+.emailvalid,
+.passvalid,
+.confirmpassvalid {
+  display: block;
   color: red;
   font-size: 12px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }

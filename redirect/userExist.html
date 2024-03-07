@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirect Page</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .redirect-container {
+      text-align: center;
+    }
+
+    .redirect-container h1{
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 32px;
+      margin-bottom: 30px;
+    }
+
+    .redirect-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #08C475;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    .redirect-link:hover {
+      background-color: #08a765;
+    }
+  </style>
+</head>
+<body>
+
+<div class="redirect-container">
+  <h1>User already exist ! please Login</h1>
+  <p>Redirecting to login page in 3 seconds...</p>
+  <a href="http://localhost:5000" class="redirect-link" id="redirectLink">Click here to redirect back immediately</a>
+</div>
+
+<script>
+  // Function to redirect back
+  function redirectToBack() {
+    window.location.href = 'http://localhost:5000/'; // Replace 'your_back_url_here' with the actual URL you want to redirect to
+  }
+
+  
+  setTimeout(function () {
+    redirectToBack();
+  }, 3000);
+
+  // Add click event to the link for immediate redirection
+  document.getElementById('redirectLink').addEventListener('click', function (event) {
+    event.preventDefault();
+    redirectToBack();
+  });
+</script>
+
+</body>
+</html>

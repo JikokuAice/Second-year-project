@@ -6,6 +6,12 @@
     <title>Login</title>
     <link rel="stylesheet" href="./css/login.css">
     <link rel='icon' type="image/png" href="./images/Image 5.png" loading="lazy">
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js
+    "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css
+    " rel="stylesheet">
 </head>
 <body>
     
@@ -21,11 +27,11 @@
         </div>
     
         <div class="form" >
-            <form id="login-submission" action="/" method="post">
+            <form id="login-submission" action="/login" method="post" autocomplete="off">
 
                 <div class="inputEmail">
                 <p>email</p>
-             <input type="email" name="email" id="inpute" autocomplete="off">
+             <input type="text" name="username" id="inpute">
              <small class="emailvalid"></small>
             </div>
 
@@ -42,7 +48,7 @@
                 
                 <input type="checkbox" id="inputC"><label for="inputC">remember me</label>
 
-                <p><a href="#">forget password?</a></p>
+                <p><a href="http://localhost:5000/forget">forget password?</a></p>
              </div>
 
              <button class="submit">Login</button>
@@ -57,10 +63,10 @@
            
             <p class="hl"><span>OR</span></p>
 
-            <p class="tosignin">dont have account?<a href="signin.html">Register</a></p>
+            <p class="tosignin">dont have account?<a href="http://localhost:5000/register">Register</a></p>
 
             <div class="social">
-            <a href="./signin.html"><img src="./images/login/to login.png" loading="lazy"></a>
+            <a href="http://localhost:5000/register"><img src="./images/login/to login.png" loading="lazy"></a>
             </div>
     </div>
     <script src="./scripts/login.js" ></script>

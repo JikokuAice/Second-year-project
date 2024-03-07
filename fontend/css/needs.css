@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  font-size: 16px;
+  --main-font: 24px;
+  --nav-font-family: "Inter";
+  --dark: #28282a;
+  --white-bg: #ffffff;
+  --red-text: #f90808;
+  --main-theme: #08c475;
+  --link-color: #6358dc;
+}
+::-webkit-scrollbar-thumb {
+  min-height: 40px;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+aside {
+  height: 100vh;
+  width: 21rem;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-bg);
+  gap: 1rem;
+  padding: 1rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  user-select: none;
+}
+
+aside::-webkit-scrollbar {
+  width: 5px;
+}
+aside::-webkit-scrollbar-thumb {
+  background-color: #ebebeb;
+  border-radius: 10px;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--main-theme);
+  font-weight: bold;
+}
+
+.logo a span {
+  margin-bottom: 1rem;
+}
+
+.createCategory {
+  height: 2.6rem;
+  border-radius: 38px;
+  background-color: #f6f6f6;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+.createCategory a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.createCategory a i {
+  display: inline-block;
+  padding: 0.2rem 0.3rem;
+  border-radius: 60px;
+  background-color: var(--main-theme);
+  font-size: 1.5rem;
+}
+
+ul span::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f078";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+  font-size: 1rem;
+  padding: 0.4rem 0.4rem;
+  border-radius: 10px;
+  margin-right: 1rem;
+  background-color: #efefef;
+}
+
+ul span {
+  user-select: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: "Inter";
+}
+
+ul a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+
+ul li {
+  font-family: "Inter";
+  font-size: 1rem;
+  list-style: none;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+ul li::before {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  font-weight: 900;
+}
+
+ul li {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+main {
+  margin-left: 24.5rem;
+  padding: 1rem;
+  user-select: none;
+}
+
+.outer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  gap: 2rem;
+}
+
+.dashboard {
+  border: 1px solid #a39999;
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 5rem;
+}
+
+.dashboard div {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 2rem;
+  color: #0000009e;
+}
+
+.dashboard p {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: 1rem;
+  color: #0000009e;
+}
+
+h1 {
+  padding-left: 1rem;
+  font-family: "Poppins";
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.needsAmount {
+  font-weight: 600;
+  color: #08c475;
+  user-select: text;
+}
+
+.dashboard {
+  border: 1px solid #a39999;
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: "Poppins";
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 5rem;
+}
+
+.needItem {
+  border: 1px solid #d9d9d9;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 544px;
+  gap: 2rem;
+  position: absolute;
+  top: 252px;
+  left: 600px;
+  padding: 2rem 3rem 1rem 3rem;
+  border-radius: 30px;
+  font-size: 24px;
+  font-family: "Inter";
+  color: #6f7482;
+}
+
+.needItem div {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.needItem div input {
+  padding: 10px;
+  margin-top: 0.5rem;
+  border: none;
+  background-color: #ecf5ff;
+  border-radius: 4px;
+}
+
+select {
+  padding: 8px;
+  border: none;
+  background-color: #ecf5ff;
+  border-radius: 4px;
+  color: #6f7482;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+#needSubmit {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+#needSubmit button {
+  padding: 0.5rem 3rem;
+  border: none;
+  background-color: var(--main-theme);
+  color: var(--white-bg);
+  border-radius: 28px;
+  cursor: pointer;
+}
+
+#needSubmit button:hover {
+  background-color: #05b068;
+}
