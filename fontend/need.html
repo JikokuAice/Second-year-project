@@ -1,97 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Needs</title>
-    <link rel="stylesheet" href="./css/needs.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <link rel="stylesheet" href="./css/needs.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="
     https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.all.min.js
     "></script>
-    <link href="
+    <link
+      href="
     https://cdn.jsdelivr.net/npm/sweetalert2@11.10.5/dist/sweetalert2.min.css
-    " rel="stylesheet">
-</head>
-<body>
-<aside>
+    "
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <aside>
+      <div class="logo">
+        <a href="http://localhost:5000/home" class="nav-link">
+          <img src="./images/homepage/Image 5.png" loading="lazy" />
+          <span class="nav-text">Finance</span>
+          <span class="nav-text">360</span>
+        </a>
+      </div>
 
-<div class="logo">
-    <a href="http://localhost:5000/home" class="nav-link">
-        <img src="./images/homepage/Image 5.png" loading="lazy">
-        <span class="nav-text">Finance</span>
-        <span class="nav-text">360</span>
-    </a>
-</div> 
+      <a href="http://localhost:5000/home"><i class="fa-solid fa-arrow-left"></i></a>
 
-<a href="http://localhost:5000/home"><i class="fa-solid fa-arrow-left"></i></a>
+      <div class="createCategory">
+        <p>Categories</p>
+        <a href="http://localhost:5000/addcategory"><i class="fa-solid fa-plus" style="color: #f6f6f6"></i
+        ></a>
+      </div>
+    </aside>
+    <main>
+      <h1>Needs</h1>
+      <div class="dashboard">
+        <div><span>Total Budget: </span><span class="needsAmount"></span></div>
+        <p>50% of total budget</p>
+      </div>
 
-<div class="createCategory">
-<p>Categories</p>
-<a href="http://localhost:5000/addcategory"><i class="fa-solid fa-plus" style="color: #F6F6F6;"></i></a>    
-</div>
-<ul>
-<span>Food</span>
-<a href=""><i class="fa-solid fa-pencil" style="color: #000000;"></i></a>  
-<li><p class="list_name">book</p><p class="Li_price">Rs:100</p><a href=""><i class="fa-solid fa-pencil" style="color: #000000;font-size:small"></i></a></li>
-<li>hello</li>
-<li>hello</li>
-<li>hello</li>
-</ul>
+      <form class="needItem">
+        <div class="itemName">
+          <p>Item Name</p>
+          <input
+            type="text"
+            placeholder="Text ✍️"
+            name="itemName"
+            id="itemName"
+          />
+        </div>
 
-<ul>
-    <span>Food</span>
-    <a href=""><i class="fa-solid fa-pencil" style="color: #000000;"></i></a>  
-    <li><p class="list_name">book</p><p class="Li_price">Rs:100</p><a href=""><i class="fa-solid fa-pencil" style="color: #000000;font-size:small"></i></a></li>
-    <li>hello</li>
-    <li>hello</li>
-    <li>hello</li>
-</ul>
+        <div class="itemPrice">
+          <p>Item Price</p>
+          <input
+            type="text"
+            placeholder="Text ✍️"
+            name="itemPrice"
+            id="itemPrice"
+          />
+        </div>
 
+        <div class="itemCategory">
+          <p>Category</p>
+          <select>
+            <option>Select Category 🫵</option>
+          </select>
+        </div>
 
-<ul>
-    <span>Food</span>
-    <a href=""><i class="fa-solid fa-pencil" style="color: #000000;"></i></a>  
-    <li><p class="list_name">book</p><p class="Li_price">Rs:100</p><a href=""><i class="fa-solid fa-pencil" style="color: #000000;font-size:small"></i></a></li>
-    <li>hello</li>
-    <li>hello</li>
-    <li>hello</li>
-</ul>
-
-</aside>
-<main>
-    <h1>Needs</h1>
-        <div class="dashboard">
-            <div><span>Total Budget: </span><span class="needsAmount"></span></div>
-            <p>50% of total budget</p>
-            </div>
-
-            <form class="needItem">
-                <div class="itemName">
-                    <p>Item Name</p>
-                    <input type="text" placeholder="Text ✍️" name="itemName" id="itemName">
-                </div>
-
-                <div class="itemPrice">
-                    <p>Item Price</p>
-                    <input type="text" placeholder="Text ✍️" name="itemPrice" id="itemPrice">
-                </div>
-
-                <div class="itemCategory">
-                    <p>Category</p>
-                <select>
-                    <option>Select Category 🫵</option>
-                </select>
-            </div>
-
-                <div id="needSubmit">
-                <button type="submit">Add</button>
-            </div>
-            </form>
-    
-</main>
-</body>
-<script src="./scripts/need.js"></script>
+        <div id="needSubmit">
+          <button type="submit">Add</button>
+        </div>
+      </form>
+    </main>
+  </body>
+  <script type="module" src="./scripts/need.js"></script>
 </html>

@@ -65,7 +65,7 @@
 
 
         <li class="nav-list">
-            <a href="" class="nav-link">
+            <a href="http://localhost:5000/aboutUs" class="nav-link">
                 <i class="fa-solid fa-user-tie"></i>
                 <span class="nav-text">About</span>
                 <span class="nav-text">Us</span>
@@ -118,25 +118,25 @@
             </div>
 
             <div id="expense">
-                <i class="fa-regular fa-circle-up" style="color: #c40808;"></i><span>Expense Rs :</span><span class="outflow">rs 100</span>
+                <i class="fa-regular fa-circle-up" style="color: #c40808;"></i><span>Expense Rs :</span><span class="outflow"></span>
             </div>
 
             <div id="total">
-                <span>Total Amount Rs :</span><span class="totalAmount">Rs 100</span>
+                <span>Total Amount Left Rs :</span><span class="totalAmount"></span>
             </div>
         </div>
 
         <div class="right">
             <div>
-            <i class="fa-solid fa-sack-dollar" style="color: #08c487;"></i> <span>Total Saving Rs :</span><span class="saving"></span>
+            <i class="fa-solid fa-sack-dollar" style="color: #08c487;"></i> <span>20% for Saving Rs :</span><span class="saving"></span>
             </div>
         </div>
         
     </div>
     <!-- <img src="./images/homepage/Scene Wireframe.png"> -->
     <form method="post" action="/home/allocation">
-        <input type="text" placeholder="insert budget" name="incAllocation">
-        <button class="submit">allocate</button>
+        <input type="text" placeholder="insert budget" name="incAllocation" class="incomeIn">
+        <button class="submit" id="allocate">allocate</button>
     </form>
 </div>
 </main>

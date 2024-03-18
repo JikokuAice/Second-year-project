@@ -37,29 +37,36 @@ Ncategory:[{
 const budgetSchema = new Schema({
     income: {
         type: Number,
-        required: true
     },
     expense: {
         type: Number,
-        required: true
     },
     Wants: {
         type: Number,
-        required: true
     },
     Needs: {
         type: Number,
-        required: true
-    },
+
+    },needExpense:{
+
+        type:Number
+    },wantExpense:{
+
+        type:Number
+    }
+    ,
     Saving: {
         type: Number,
-        required: true
     },
     currentDate:{
         type:Date
         
     }
 });
+
+
+
+
 
 const  User = mongoose.model('User',register);
 const wallet = mongoose.model('wallet',budgetSchema)
