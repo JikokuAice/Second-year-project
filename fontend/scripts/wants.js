@@ -43,7 +43,7 @@ submit.addEventListener("click", (e) => {
     try {
       // Making a POST request using Axios
       axios
-        .post("https://second-year-project.onrender.com/wants/items", {
+        .post("/wants/items", {
           //sending add item form to backend at /needs/items url
           Name: Name.value,
           Price: Price.value,

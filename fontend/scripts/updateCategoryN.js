@@ -30,7 +30,7 @@ updateButn.addEventListener("click", async () => {
         confirmButtonText: "ok",
       }).then((result) => {
         if (result.isConfirmed) {
-          location.href = "http://localhost:5000/needs";
+          location.href = "https://second-year-project.onrender.com/needs";
         }
       });
     }
@@ -56,7 +56,7 @@ deleteButn.addEventListener("click", async () => {
       confirmButtonText: "ok",
     }).then((result) => {
       if (result.isConfirmed) {
-        location.href = "http://localhost:5000/needs";
+        location.href = "https://second-year-project.onrender.com/needs";
       }
     });
   }

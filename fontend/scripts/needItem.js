@@ -82,7 +82,7 @@ update.addEventListener("click", async () => {
                   confirmButtonText: "ok",
                 }).then((result) => {
                   if (result.isConfirmed) {
-                    location.href = "http://localhost:5000/needs";
+                    location.href = "https://second-year-project.onrender.com/needs";
                   }
                 });
               });} 
@@ -106,7 +106,7 @@ update.addEventListener("click", async () => {
                   confirmButtonText: "ok",
                 }).then((result) => {
                   if (result.isConfirmed) {
-                    location.href = "http://localhost:5000/needs";
+                    location.href = "https://second-year-project.onrender.com/needs";
                   }
                 });
               });
@@ -118,7 +118,7 @@ update.addEventListener("click", async () => {
               confirmButtonText: "ok",
             }).then((result) => {
               if (result.isConfirmed) {
-                location.href = "http://localhost:5000/needs";
+                location.href = "https://second-year-project.onrender.com/needs";
               }
             });
           }
@@ -159,7 +159,7 @@ remove.addEventListener("click", async () => {
             confirmButtonText: "ok",
           }).then((result) => {
             if (result.isConfirmed) {
-              location.href = "http://localhost:5000/needs";
+              location.href = "https://second-year-project.onrender.com/needs";
             }
           });
         });

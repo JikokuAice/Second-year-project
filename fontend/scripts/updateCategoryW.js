@@ -28,7 +28,7 @@ updateButn.addEventListener("click", async () => {
       newKey: newName.value,
     });
     if(fetch.data.data=='sucess'){
-      location.href="http://localhost:5000/wants"
+      location.href="https://second-year-project.onrender.com/wants"
     }
   }else{
     Swal.fire({
