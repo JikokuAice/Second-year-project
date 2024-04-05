@@ -43,7 +43,7 @@ submit.addEventListener("click", (e) => {
     try {
       // Making a POST request using Axios
       axios
-        .post("http://localhost:5000/wants/items", {
+        .post("https://second-year-project.onrender.com/wants/items", {
           //sending add item form to backend at /needs/items url
           Name: Name.value,
           Price: Price.value,
@@ -168,7 +168,7 @@ document.addEventListener("click", (e) => {
     e.preventDefault();
 
     axios.post("/updateCategoryW", { key: e.target.id }).then((e) => {
-      location.href = "http://localhost:5000/updateCategoryW";
+      location.href = "https://second-year-project.onrender.com/updateCategoryW";
     });
   }
 });
@@ -177,7 +177,7 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("updateWantItem")) {
     e.preventDefault();
     axios.post(`/updateItemWant`, { key: e.target.id }).then((e) => {
-      location.href = "http://localhost:5000/updateItemWant";
+      location.href = "https://second-year-project.onrender.com/updateItemWant";
     });
   }
 });
