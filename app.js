@@ -21,14 +21,14 @@ const needsRoute = require("./routes/needsRoute");
 const wantRoute = require("./routes/wantsRoute");
 const nCategoryUpdateRoute = require("./routes/nCategoryUpdateRoute");
 const wCategoryUpdateRoute = require("./routes/wCategoryUpdateRoute");
-
+const PORT = process.env.PORT || 5000;
 const dbu =
   "mongodb+srv://Ayush:Ayushlac321@cluster1.eqgfnr5.mongodb.net/Register?retryWrites=true&w=majority";
 mongoose
   .connect(dbu)
   .then((r) => {
-    return app.listen(5000, () => {
-      console.log(`sever is running at => http://localhost:5000`);
+    return app.listen(PORT, () => {
+      console.log(`sever is running at => http://localhost:${PORT}`);
     });
   })
   .catch((err) => {
