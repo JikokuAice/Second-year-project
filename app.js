@@ -32,7 +32,7 @@ mongoose
     });
   })
   .catch((err) => {
-    console.log(err);
+    console.log(err)
   });
 
 const { needCategory, needItem } = require("./schema/needSchema");
