@@ -33,7 +33,7 @@ submit.addEventListener("click", (e) => {
     Swal.fire({
       icon: "info",
       title: "want page budget!!😓",
-      text: "you lack budget to perform this action",
+      text: "you lack budget to perform this action please use wants budget wisly🧠",
       confirmButtonText: "ok",
     });
   } else {
@@ -54,9 +54,15 @@ submit.addEventListener("click", (e) => {
 
           let calculate = fetch.data.Wants - e.data.itemprice;
 
+          let expense = fetch.data.expense + e.data.itemprice;
+
           let id = fetch.data._id;
           axios
-            .post("/wants/calculation", { key: id, calculate: calculate })
+            .post("/wants/calculation", {
+              key: id,
+              calculate: calculate,
+              expense: expense,
+            })
             .then((e) => {
               Swal.fire({
                 icon: "success",

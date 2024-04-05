@@ -36,7 +36,7 @@ submit.addEventListener("click", async (e) => {
     Swal.fire({
       icon: "info",
       title: "need page budget!!😓",
-      text: "you lack budget to perform this action",
+      text: "you lack budget to perform this action please use needs budget wisly🧠",
       confirmButtonText: "ok",
     });
   } else {
@@ -59,17 +59,13 @@ submit.addEventListener("click", async (e) => {
         )
         .then(async (e) => {
           let fetch = await axios.get("/home/allocation");
-
+          
           let calculate = fetch.data.Needs - e.data.itemprice;
-
-          let newIncome = fetch.data.income - e.data.itemprice;
-
           let expense = fetch.data.expense + e.data.itemprice;
           axios
             .post("/needs/calculation", {
               calculate: calculate,
               key: fetch.data._id,
-              income: newIncome,
               expense: expense,
             })
             .then((e) => {

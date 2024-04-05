@@ -7,7 +7,6 @@ const remove = document.querySelector("#delete");
 
 async function display() {
   let fetch = await axios.get("/updateItemWant/values");
-  console.log(fetch);
   oldName.value = fetch.data.wantItemName;
   oldPrice.value = fetch.data.wantItemPrice;
 }
@@ -37,7 +36,7 @@ update.addEventListener("click", async () => {
     let oldprice = oldPrice.value;
     let newname = newName.value;
     let newprice = newPrice.value;
-    console.log(oldName, oldPrice);
+  
 
     let fetch = await axios.get("/home/allocation");
     const currentBudget = newprice - oldprice;
@@ -45,8 +44,10 @@ update.addEventListener("click", async () => {
 
     if (currentBudget > wantBudget) {
       Swal.fire({
-        icon: "error",
-        title: "budget exceeds 🫡",
+        icon: "info",
+        title: "want page budget!!😓",
+        text: "you lack budget to perform this action please use wants budget wisly🧠",
+        confirmButtonText: "ok",
       });
     } else {
       axios
@@ -62,7 +63,7 @@ update.addEventListener("click", async () => {
           if (oldprice > newprice) {
             let pluswant = oldprice - newprice;
             let calculate = wantBudget + pluswant;
-            let expense = fetch.data.expense + pluswant;
+            let expense = fetch.data.expense - pluswant;
             axios
               .post("/updateItemWant/calculate", {
                 key: key,

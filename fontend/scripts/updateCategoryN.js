@@ -62,4 +62,4 @@ deleteButn.addEventListener("click", async () => {
   }
 });
 
-console.log(deleteButn);
+

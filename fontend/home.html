@@ -25,7 +25,6 @@
     <ul class="nav-ul">
         <li class="logo">
             <a href="" class="nav-link">
-               
                 <img src="./images/homepage/Image 5.png">
                 <span class="nav-text">Finance</span>
                 <span class="nav-text">360</span>
@@ -56,12 +55,12 @@
       
 
 
-        <li class="nav-list">
+        <!-- <li class="nav-list">
             <a href="" class="nav-link">
                 <i class="fa-solid fa-chart-pie"></i>
                 <span class="nav-text">Analytics</span>
             </a>
-        </li>
+        </li> -->
 
 
         <li class="nav-list">
@@ -73,7 +72,7 @@
         </li>
 
         <li class="nav-list">
-            <a href="" class="nav-link">
+            <a href="http://localhost:5000/transaction" class="nav-link">
                 <i class="fa-solid fa-hand-holding-dollar"></i>
                 <span class="nav-text">Transaction</span>
             </a>
@@ -103,8 +102,8 @@
 
 <main>
     <div class="top">
-        <p>Welcome to Finance 360</p>
-        <a href=""><img src=""></a>
+        <p>Welcome to Finance 360<span class="username"></span></p>
+        <a><img src="./images/icons.png"></a>
     </div>
 <div class="outer">
     <div class="dashboard">
@@ -134,9 +133,10 @@
         
     </div>
     <!-- <img src="./images/homepage/Scene Wireframe.png"> -->
-    <form method="post" action="/home/allocation">
-        <input type="text" placeholder="insert budget" name="incAllocation" class="incomeIn">
-        <button class="submit" id="allocate">allocate</button>
+    <form method="post" action="/home/allocation" class="income_allocation">
+        <h3>Income Budget</h3>
+        <input type="text" placeholder="allocate✍️ 💰" name="incAllocation" class="incomeIn">
+        <button class="submit" id="allocate">submit</button>
     </form>
 </div>
 </main>

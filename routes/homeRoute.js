@@ -17,7 +17,7 @@ router.post("/allocation", async (req, res) => {
   const Wants = income * (30 / 100);
   const needs = income * (50 / 100);
   const saving = income * (20 / 100);
-  const expense = Math.random();
+  const expense = 0;
   const email = req.user.username;
 
   const budget = new wallet({
@@ -29,7 +29,7 @@ router.post("/allocation", async (req, res) => {
 
     Needs: needs,
 
-    Saving: saving,
+    Saving: saving.toFixed(1),
 
     Email: email,
 
@@ -42,7 +42,6 @@ router.post("/allocation", async (req, res) => {
     { _id: req.user._id },
     { $set: { wallets: budget._id } }
   );
-  console.log(ak);
 
   res.redirect("/home");
 });

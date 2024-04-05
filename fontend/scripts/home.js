@@ -3,6 +3,14 @@ const exitButton = document.querySelector(".exit");
 
 const inputValue = document.querySelector(".incomeIn");
 const submit = document.querySelector("#allocate");
+const names = document.querySelector(".username");
+
+function display() {
+  axios.get("/username").then((e) => {
+    names.innerText = `  ✨Mr. ${e.data}✨`;
+  });
+}
+display();
 
 submit.addEventListener("click", (e) => {
   e.preventDefault();
@@ -60,16 +68,15 @@ axios.get("/home/allocation").then((e) => {
   let income = e.data.income;
   let saving = e.data.Saving;
   let expense = e.data.expense;
-  console.log(income.length);
 
   let balance = document.querySelector(".balance");
 
   let outExpense = document.querySelector(".outflow");
-  balance.innerText = ` ${income.toFixed(0).toLocaleString()}`;
-  outExpense.innerText = ` ${expense.toFixed(0).toLocaleString()}`;
+  balance.innerText = ` ${income.toFixed(0)}`;
+  outExpense.innerText = ` ${expense.toFixed(0)}`;
 
   let total = document.querySelector(".totalAmount");
-  total.innerText = ` ${(income - expense).toFixed(0).toLocaleString()}`;
+  total.innerText = ` ${(income - expense).toFixed(0)}`;
 
   let Saving = document.querySelector(".saving");
   Saving.innerText = ` ${saving.toLocaleString()}`;

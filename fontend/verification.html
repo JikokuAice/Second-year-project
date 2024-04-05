@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verification Code</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      form {
+        text-align: center;
+      }
+
+      input {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+        padding: 6px;
+        margin-bottom: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      button {
+        width: 100px;
+        height: 40px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post" action="/forgetMyPass/verify">
+      <input
+        maxlength="4"
+        minlength="4"
+        type="text"
+        name="code"
+        placeholder="Enter 4-digit code"
+      />
+
+      <input
+        minlength="8"
+        type="text"
+        name="pass"
+        placeholder="Enter new password"
+      />
+
+      <button type="submit">Confirm</button>
+    </form>
+  </body>
+  <script></script>
+</html>

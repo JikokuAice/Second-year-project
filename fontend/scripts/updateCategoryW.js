@@ -7,7 +7,7 @@ async function display() {
   
   
     let fetch = await axios.get("/updateCategoryW/value");
-    console.log(fetch.data);
+   
   input.value=fetch.data;
   }
   display();

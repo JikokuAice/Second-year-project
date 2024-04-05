@@ -1,35 +1,43 @@
-const submit = document.querySelector('button');
-const needs = document.querySelector('#needs')
-const wants = document.querySelector('#wants')
-const text = document.querySelector('input[type="text"]')
-console.log(text)
-submit.addEventListener('click',async (e)=>{
-    e.preventDefault();
+const submit = document.querySelector("button");
+const needs = document.querySelector("#needs");
+const wants = document.querySelector("#wants");
+const text = document.querySelector('input[type="text"]');
+submit.addEventListener("click", async (e) => {
+  e.preventDefault();
 
-    if(needs.checked){
-     axios.post('/addcategory/needs',{
-        Nname:text.value
-     }).catch((err)=>{
+  if (needs.checked) {
+    axios
+      .post("/addcategory/needs", {
+        Nname: text.value,
+      })
+      .then((e) => {
         Swal.fire({
-            icon:'error',
-            title:'Oops',
-            text:"failed to create category !try again"
-        })
-    })
+          icon: "success",
+          title: "created",
+          text: "category created sucessfully for need page",
+          confirmButtonText: "ok",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            location.href = "http://localhost:5000/needs";
+          }
+        });
+      })
+  }
+
+  if (wants.checked) {
+    axios.post("/addcategory/wants", {
+      Wname: text.value,
+    }).then((e) => {
         Swal.fire({
-            icon:'success',
-            title:'created',
-            text:"category created sucessfully"
-        })
-     
-   
-    }
-    if(wants.checked){
-        axios.post('/addcategory/wants',{
-            Wname:text.value
-         })  
-    }
-
-})
-
-
+          icon: "success",
+          title: "created",
+          text: "category created sucessfully for want page",
+          confirmButtonText: "ok",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            location.href = "http://localhost:5000/wants";
+          }
+        });
+      })
+  }
+});

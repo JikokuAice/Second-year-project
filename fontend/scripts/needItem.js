@@ -45,8 +45,10 @@ update.addEventListener("click", async () => {
 
     if (currentBudget > needBudget) {
       Swal.fire({
-        icon: "error",
-        title: "bidget exceeds 🫡",
+        icon: "info",
+        title: "need page budget!!😓",
+        text: "you lack budget to perform this action please use needs budget wisly🧠",
+        confirmButtonText: "ok",
       });
     } else {
       
@@ -141,8 +143,7 @@ remove.addEventListener("click", async () => {
 
       const calculate = Number(needBudget) + Number(oldprice);
       const expense = needExpense - oldprice;
-      console.log(calculate);
-      console.log(expense);
+   
 
       axios
         .post("/updateItemNeed/calculate", {

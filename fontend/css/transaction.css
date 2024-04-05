@@ -1,0 +1,158 @@
+:root {
+  font-size: 16px;
+  --main-font: 24px;
+  --nav-font-family: "Inter";
+  --dark: #28282a;
+  --white-bg: #ffffff;
+  --red-text: #f90808;
+  --main-theme: #08c475;
+  --link-color: #6358dc;
+}
+::-webkit-scrollbar-thumb {
+  min-height: 40px;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.outer {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 2fr;
+  padding: 10px;
+  gap: 2rem;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.8fr;
+}
+
+.top-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.top-left input {
+  margin-left: 3rem;
+}
+
+.top-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  margin-left: 2rem;
+}
+
+.dashboard {
+  padding: 1.2rem 2rem;
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset,
+    rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+}
+
+.dashboard i {
+  padding-right: 2rem;
+  font-size: 1.5rem;
+}
+
+.dashboard span {
+  font-family: "Inter";
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2e2e2e;
+}
+
+#amount {
+  color: var(--main-theme);
+}
+
+.heading {
+  font-family: "Inter";
+  font-size: 1.5rem;
+  margin-bottom: 1.4rem;
+  margin-left: 4rem;
+}
+
+.main {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main .transaction {
+  width: 500px;
+  border-radius: 2rem;
+  border: 1px solid black;
+  background-color: #f9f9f9;
+  padding: 0px 1rem;
+  height: 50px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inner-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.inner-row i {
+  margin-right: 2rem;
+  font-size: 2rem;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: "Inter";
+  color: #434343;
+}
+
+.date {
+  font-weight: 500;
+  font-size: 0.6rem;
+  font-family: monospace;
+  color: #6e6e6e;
+}
+
+.amount {
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-family: "Inter";
+  color: #fb0808;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter";
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2e2e2e;
+}
+
+.info p {
+  margin-top: 1rem;
+}
+
+.remove {
+  cursor: pointer;
+  padding-left: 7px;
+}

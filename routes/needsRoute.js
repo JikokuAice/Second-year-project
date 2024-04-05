@@ -4,7 +4,7 @@ const { User, wallet } = require("../schema/registerSchema");
 const { needCategory, needItem } = require("../schema/needSchema");
 const { sessionAuth } = require("../backend/passport-config");
 const path = require("path");
-
+const transactionHistory = require("../schema/transaction");
 router.get("/", sessionAuth, (req, res) => {
   res.sendFile(path.resolve(__dirname, "../fontend/need.html"));
 });
@@ -23,26 +23,45 @@ router.post("/items", async (req, res) => {
     { categoryName: categoryName },
     { $push: { items: item._id } }
   );
+
+  let transaction = new transactionHistory({
+    Tname: Name,
+    Tcategory: "Need",
+    Tprice: Price,
+    TDates: Sdate,
+  });
+
+  await transaction.save();
+
+  await User.findOneAndUpdate(
+    { _id: req.user._id },
+    { $push: { transactionHistory: transaction._id } }
+  );
+
   res.send(fetch);
 });
 
 router.get("/item", async (req, res) => {
-  let populated = await User.findOne(req.user._id);
+  try {
+    const user = await User.findById(req.user._id);
+   
+    const populatedCategories = await Promise.all(
+      user.Ncategory.map(async (categoryId) => {
+        const category = await needCategory
+          .findById(categoryId)
+          .populate("items");
+        return category;
+      })
+    );
 
-  let arr = populated.Ncategory;
-  const arrays = [];
-  for (let e of arr) {
-    let objId = e.toString();
-    let data = await needCategory
-      .findOne({ _id: objId })
-      .populate("items")
-      .exec();
-
-    if (data != null) {
-      arrays.push(data);
-    }
+    const filteredCategories = populatedCategories.filter(
+      (category) => category !== null
+    );
+    res.send(filteredCategories);
+  } catch (error) {
+    console.error("Error fetching items:", error);
+    res.status(500).send("Internal Server Error");
   }
-  res.send(arrays);
 });
 
 router.post("/calculation", async (req, res) => {

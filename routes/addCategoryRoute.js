@@ -14,7 +14,6 @@ router.post("/needs", sessionAuth, async (req, res) => {
   /*we are getting current date with time using new Date method and then  convert 
   the valur we get to 29/02/2024, 19:16:51 this string which can be split(',') at "29/02/2024, 19:16:51" which will split string to two
         array from , and we can use arrayindex to get 29/02/2024 only and send it to mongo for future use*/
-
   var a = new Date().toLocaleString().split(",");
 
   const need = new needCategory({
@@ -28,6 +27,7 @@ router.post("/needs", sessionAuth, async (req, res) => {
     { _id: req.user.id },
     { $push: { Ncategory: need._id } }
   );
+  res.send("success");
 });
 
 router.get("/getwant", sessionAuth, async (req, res) => {
@@ -41,7 +41,6 @@ router.get("/getwant", sessionAuth, async (req, res) => {
 });
 
 router.post("/wants", sessionAuth, async (req, res) => {
-  console.log(req.body.Wname);
   var a = new Date().toLocaleString().split(",");
   const want = new wantCategory({
     categoryName: req.body.Wname,
@@ -53,6 +52,7 @@ router.post("/wants", sessionAuth, async (req, res) => {
     { _id: req.user.id },
     { $push: { Wcategory: want._id } }
   );
+  res.send("success");
 });
 
 module.exports = router;
