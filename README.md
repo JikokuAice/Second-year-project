@@ -5,6 +5,6 @@ it is the Finance 360 App which is for student to manage their monthly budget wh
 "50-30-20" rule of basic financing.
 
 --stack used--
-Front end :- HTML,CSS and JS
-Backend :- node/express.js
+Front end :- HTML,CSS and JS  ,
+Backend :- node/express.js    ,
 Database :- mongoDB with mongoose.
